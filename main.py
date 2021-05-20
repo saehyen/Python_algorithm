@@ -1,28 +1,15 @@
 n = int(input())
-x,y = 1,1
+result = 0
 
-m = list(input().split())
+# 탐색기법.
+# 0시~n시 = n+1
+for i in range(n + 1):
+    # 60분
+    for j in range(60):
+        # 60초
+        for k in range(60):
+            # 3이 있는지 검색
+            if '3' in str(i) + str(j) + str(k) :
+                result += 1
 
-for i in m :
-
- if i == 'R':
-    y += 1
- if i == 'L':
-    y -= 1
- if i == 'U':
-    x -= 1
- if i == 'D':
-    x += 1
-
- if x == 0:
-     x = 1
- if x == n + 1:
-     x = n
- if y == n + 1:
-     y = n
- if y == 0:
-     y = 1
-
-
-print(m)
-print(x,y)
+print(result)
