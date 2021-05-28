@@ -14,27 +14,27 @@ N개의 숫자 카드 묶음의 각각의 크기가 주어질 때, 최소한 몇
 첫째 줄에 최소 비교 횟수를 출력한다.
 
 * 사용한 문법
- 힙정렬 :
- import heapq
- heap = []
+- 힙정렬 :
+ - import heapq
+ - heap = []
  # 힙 삽입
- for _ in range(n):
-    num = int(input())
-    heapq.heappush(heap, num)
+ - for _ in range(n):
+ -   num = int(input())
+ -   heapq.heappush(heap, num)
  # 힙 사용
- while len(heap) != 1:
-    num1 = heapq.heappop(heap)
-    num2 = heapq.heappop(heap)
-    _sum = num1 + num2
-    result += _sum
-    heapq.heappush(heap, _sum)
+ -while len(heap) != 1:
+ -   num1 = heapq.heappop(heap)
+ -   num2 = heapq.heappop(heap)
+ -   _sum = num1 + num2
+ -   result += _sum
+ -   heapq.heappush(heap, _sum)
     
 ------------------------------------------
-우선순위 큐
-from queue import PriorityQueue
-q.put(int(sys.stdin.readline()))
-while q.qsize() >= 2:
-    a = q.get()
-    b = q.get()
-    result += a+b
-    q.put(a+b)
+- 우선순위 큐
+- from queue import PriorityQueue
+- q.put(int(sys.stdin.readline()))
+- while q.qsize() >= 2:
+-    a = q.get()
+-    b = q.get()
+-    result += a+b
+-    q.put(a+b)
