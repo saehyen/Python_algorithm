@@ -17,8 +17,8 @@
 -  return 1
 - elif a[mid] > num :
 - r = mid - 1
-- # 반 줄여주기 1
+- 반 줄여주기 1
 - else:
 - l = mid + 1
-- # 반 줄여주기 2
+- 반 줄여주기 2
 - return 0
