@@ -1,0 +1,11 @@
+def solution(price, money, count):
+    answer = 0
+    prices = price
+
+    for i in range(count):
+        answer += prices
+        prices = prices + price
+    if money > answer:
+        return 0
+    else:
+        return answer - money
