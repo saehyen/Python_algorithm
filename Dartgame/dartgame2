@@ -1,0 +1,32 @@
+def solution(dartResult):
+    n = ''
+    score = []
+    dartlist = list(dartResult)
+    for i in range(len(dartlist)):
+        if dartlist[i] == "A":
+            dartlist[i] = 10
+
+    for i in dartlist:
+        if i.isnumeric():
+            n += i
+        elif i == 'S':
+            n = int(n) ** 1
+            score.append(n)
+            n = ''
+        elif i == 'D':
+            n = int(n) ** 2
+            score.append(n)
+            n = ''
+        elif i == 'T':
+            n = int(n) ** 3
+            score.append(n)
+            n = ''
+        elif i == '*':
+            if len(score) > 1:
+                score[-2] *= 2
+                score[-1] *= 2
+            else:
+                score[-1] *= 2
+        elif i == '#':
+            score[-1] *= -1
+    return sum(score)
