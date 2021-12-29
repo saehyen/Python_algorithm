@@ -5,8 +5,8 @@ def check(n):
     return 1
 N = int(input())
 for i in range(N):
-    N = int(input())
-    for n in range(N, 0, -1):
+    M = int(input())
+    for n in range(M, 0, -1):
         if check(str(n)):
             print(f"Case #{i+1}: {n}")
             break
